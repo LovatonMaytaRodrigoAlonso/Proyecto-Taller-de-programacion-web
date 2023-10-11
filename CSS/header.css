@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(149,110,5);
+}
+
+main{
+    padding-top: 122px;
+}
+
+/*Header*/
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+#BarraPrincipal{
+
+    width: 100%;
+    background-color: rgb(219,175,54);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 5%;
+}
+
+
+#BarraPrincipal a{
+    text-decoration: none;
+}
+
+#BarraPrincipal h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    margin:0;
+    margin-left: 0px; /* Elimina el margen predeterminado del título */
+}
+
+#BarraPrincipal ul{
+    display: flex;
+}
+
+/* #BarraPrincipal #IniciarCuenta{
+    padding-left: 60%;
+} */
+
+#BarraPrincipal li{
+    list-style: none;
+    padding: 15px;
+}
+
+#BarraPrincipal ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#BarraPrincipal ul li a:hover{
+    color: white;
+}
+
+.nav{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: rgb(240,228,110);
+    text-align: center;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0px 60px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav ul li a:hover {
+    color: white;
+}
+
+.nav.active{
+    background-color: white;
+    
+}
+
+.nav.active, .nav.active a {
+    color: #000;
+}
+
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+.container-icon{
+    position: relative;
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos{
+    font-size: 12px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    
+}
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.imagen-mediana {
+    display: block;
+    margin: 0 auto; /* Para centrar la imagen horizontalmente */
+    width: 50%; /* Establece el tamaño de la imagen al 50% del contenedor */
+    max-width: 400px; /* Limita el tamaño máximo de la imagen a 400px */
+}
+.parrafo-nosotros{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+}
+
+h2 {
+    margin-bottom: 20px; /* Añade un espacio inferior de 20px entre títulos */
+}
+
+hr {
+    border: none;
+    border-top: 2px solid white; /* Línea horizontal de color gris oscuro */
+    margin: 20px 0; /* Márgenes superior e inferior de 20px */
+}
+
+.avatar {
+    width: 70px; /* Ancho de la imagen del avatar */
+    height: 70px; /* Altura de la imagen del avatar */
+    margin-right: 10px; /* Espaciado a la derecha de la imagen del avatar */
+    border-radius: 50%; /* Para hacer la imagen redonda, si es necesario */
+}

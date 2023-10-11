@@ -1,0 +1,134 @@
+/* Carrucel de imagenes */
+.carruselg{
+    width: 100%;    /*Ancho del contenedor*/
+    height: 60vh;  /*Ajuste de imagen de acuerdo a la pantalla*/
+    overflow: hidden;   /*Oculta el contenido que sobresale del contenedor*/
+    position: relative;
+
+}
+.carrusel{
+    position: absolute;  /*Las imagenes se sobreponen una encima de otra*/
+    height: 100%;
+    opacity: 0;
+    inset: 0;
+    animation: carrusel-show 12s infinite;
+}
+.carrusel-2{
+    animation-delay: 4s;   /*La imagen hara su animacion 4s despues de que comience la primera*/
+}
+
+.carrusel-3{
+    animation-delay: 8s;
+}
+.carrusel img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+@keyframes carrusel-show{  /*Se establece una animacion*/
+    0%{
+        opacity: 0;  /*Comienza con una opacidad de cero*/
+    }
+    10%{
+        opacity: 1;  /*Al 10% de la animacion*/
+    }
+    20%,
+    30%{
+        opacity: 1; /*La imagen se visualiza, y aumenta la escala un 3% de la imagen*/
+        /*scale: 1.03;*/
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+
+/* Platos y bebidas */
+#Platos, #Bebidas{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* Main */
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item{
+    border-radius: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+/* zoom de las imagenes */
+.item img{
+    width: 200%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.menu{
+    font-family: "Lato", serif;
+}
+
+.btn-add-cart {
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 15px 32px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar como elemento en línea */
+    font-size: 16px; /* Tamaño del texto */
+    transition-duration: 0.4s; /* Duración de la transición */
+    cursor: pointer; /* Cursor apuntando */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.btn-add-cart:hover {
+    background-color: white; /* Cambio de color al pasar el mouse */
+    color: #4CAF50; /* Cambio de color del texto al pasar el mouse */
+    border: 2px solid #4CAF50; /* Borde al pasar el mouse */
+}

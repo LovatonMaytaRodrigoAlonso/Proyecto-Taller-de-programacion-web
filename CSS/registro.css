@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.registro-box {
+    width: 80%; /* Ancho del formulario */
+    margin: 0 auto;
+    background: #000;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+}
+
+.registro-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #b80f22; /* Color de fondo del avatar */
+    margin: 0 auto 20px; /* Centrar el avatar */
+}
+
+.registro-box h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    text-align: left;
+}
+
+.registro-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.registro-box input,
+.registro-box select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.registro-box input[type="submit"] {
+    background: #b80f22;
+    cursor: pointer;
+}
+
+.registro-box input[type="submit"]:hover {
+    background: #ffc107;
+    color: #000;
+}
+
+.registro-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.registro-box a:hover {
+    color: #fff;
+}

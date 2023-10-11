@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*CAMBIOS HEADER FIJO*/
+header{
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+}
+
+main{
+	padding-top: 175px;
+}
+/*CAMBIOS HEADER FIJO */
+
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+.avatar {
+    width: 70px; /* Ancho de la imagen del avatar */
+    height: 70px; /* Altura de la imagen del avatar */
+    margin-right: 10px; /* Espaciado a la derecha de la imagen del avatar */
+    border-radius: 50%; /* Para hacer la imagen redonda, si es necesario */
+}
+
+/*
+.header .logo {
+    font-family: 'Pacifico', cursive;
+}*/
+.container-hero {
+	background-color: var(--background-color);
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-family: 'Pacifico', cursive;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}

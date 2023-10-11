@@ -1,0 +1,61 @@
+main{
+    padding-top: 500px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 5%;
+}
+
+.container-nosotros{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 2%;
+    align-items: center;
+}
+
+.container-nosotros .parrafo-nosotros{
+    padding-right: 10%;
+}
+
+.parrafo-nosotros{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+}
+
+h2 {
+    margin-bottom: 20px; /* Añade un espacio inferior de 20px entre títulos */
+}
+
+main h1{
+    padding-bottom: 3%;
+}
+
+iframe{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+hr {
+    border: none;
+    border-top: 2px solid white; /* Línea horizontal de color gris oscuro */
+    margin: 20px 0; /* Márgenes superior e inferior de 20px */
+}
+
+.imagen-mediana {
+    display: block;
+    margin: 0 auto; /* Para centrar la imagen horizontalmente */
+    width: 50%; /* Establece el tamaño de la imagen al 50% del contenedor */
+    max-width: 400px; /* Limita el tamaño máximo de la imagen a 400px */
+    border-radius: 5%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+@media(max-width: 772px) {
+    .container-nosotros{
+        display: block;
+    }
+
+    .container-nosotros .parrafo-nosotros{
+        padding: 5%;
+    }
+}
