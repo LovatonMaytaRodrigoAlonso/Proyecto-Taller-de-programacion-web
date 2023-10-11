@@ -17,7 +17,7 @@
     </header>
     
     <main>
-        <form>
+        <form method="post" action="ProcesoImagen.php">
             <section>
                 <h3>1. Información del Cliente</h3>
                 <div>
@@ -74,13 +74,17 @@
                     <input type="text" id="importe" name="importe" required placeholder="Importe">
                 </div>
                 <div>
+                    <label for="evidencia">Subir evidencia</label>
+                    <input type="file" name="evidencia" id="evidencia" accept=".png, .jpg">
+                </div>
+                <div>
                     <label for="comentario">Comentario:</label>
-                    
                     <textarea name="comentario" cols="50" rows="10"></textarea>
                 </div>
             </section>
-            
-            <button type="submit">Enviar</button>
+
+            <input type="hidden" name="accion" value="add">
+            <button type="submit" value="EnviarReclamacion">Enviar</button>
         </form>
     </main>
 

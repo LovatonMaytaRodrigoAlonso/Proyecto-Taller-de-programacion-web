@@ -1,0 +1,19 @@
+body {
+    padding: 5%;
+    background-color: #e7991a;
+    text-align: center;
+}
+
+div{
+    background-color: #f0f0f0;
+    padding: 3%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+img{
+    padding-top: 5%;
+    height: 200px;
+    border-radius: 10px;
+}
+
