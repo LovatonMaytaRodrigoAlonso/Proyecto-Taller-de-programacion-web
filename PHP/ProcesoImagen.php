@@ -35,7 +35,7 @@ if (isset($_REQUEST["accion"])) {
 
                  if (move_uploaded_file($nombreArchivoTemporal, $nombreArchivoDestino.$nombreArchivo)) {
                      echo "<script>alert('El archivo se ha cargado y movido correctamente.')</script>";
-                     header('Location: exito.html');
+                     header('Location: HTML/exito.html');
                  } else {
                      echo "<script>alert('Hubo un error al cargar o mover el archivo.')</script>";
                  }
