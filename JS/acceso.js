@@ -73,6 +73,38 @@ loginBtnlisto.addEventListener('click', () => {
     }
 });
 
+//FIREBASE AUTENTICATION
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCNdx5GxW6UyRFslPFi8QMbRi363iQzB0Q",
+  authDomain: "login-707d2.firebaseapp.com",
+  projectId: "login-707d2",
+  storageBucket: "login-707d2.appspot.com",
+  messagingSenderId: "427674472047",
+  appId: "1:427674472047:web:f96db82b347f91c8d6c79a",
+  measurementId: "G-T0QBMEDGD9"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+function login() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(function () {
+            console.log
+
+
 
 
 
