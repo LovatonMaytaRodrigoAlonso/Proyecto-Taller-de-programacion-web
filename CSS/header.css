@@ -1,45 +1,158 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgb(149,110,5);
+    color: rgb(149, 110, 5);
 }
 
-main{
+main {
     padding-top: 122px;
 }
 
 /*Header*/
-header{
+header {
     position: fixed;
     width: 100%;
     z-index: 9;
+    
 }
 
-#BarraPrincipal{
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+}
+
+.sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+.moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+    animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* .switch:hover */
+.moon svg {
+    animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.input:checked+.slider {
+    background-color: #183153;
+}
+
+.input:focus+.slider {
+    box-shadow: 0 0 1px #183153;
+}
+
+.input:checked+.slider:before {
+    transform: translateX(30px);
+}
+
+#BarraPrincipal {
 
     width: 100%;
-    background-color: rgb(219,175,54);
+    background-color: rgb(219, 175, 54);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     padding-left: 5%;
+    flex: 1;
 }
 
 
-#BarraPrincipal a{
+#BarraPrincipal a {
     text-decoration: none;
 }
 
-#BarraPrincipal h1{
+#BarraPrincipal h1 {
     font-family: 'Pacifico', cursive;
     font-size: 30px;
-    margin:0;
-    margin-left: 0px; /* Elimina el margen predeterminado del título */
+    margin: 0;
+    margin-left: 0px;
+    /* Elimina el margen predeterminado del título */
 }
 
-#BarraPrincipal ul{
+#BarraPrincipal ul {
     display: flex;
 }
 
@@ -47,28 +160,29 @@ header{
     padding-left: 60%;
 } */
 
-#BarraPrincipal li{
+#BarraPrincipal li {
     list-style: none;
     padding: 15px;
 }
 
-#BarraPrincipal ul li a{
+#BarraPrincipal ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
 }
 
-#BarraPrincipal ul li a:hover{
+#BarraPrincipal ul li a:hover {
     color: white;
 }
 
-.nav{
+
+.nav {
 
     width: 100%;
     display: flex;
     align-items: center;
     font-weight: bold;
-    background-color: rgb(240,228,110);
+    background-color: rgb(240, 228, 110);
     text-align: center;
     font-size: 18px;
     padding-top: 15px;
@@ -78,6 +192,8 @@ header{
 .nav ul {
     list-style: none;
 }
+
+
 
 .nav ul li {
     display: inline-block;
@@ -95,33 +211,36 @@ header{
     color: white;
 }
 
-.nav.active{
-    background-color: white;
-    
+.nav.active {
+    background-color: rgb(240, 228, 110);
+
 }
 
-.nav.active, .nav.active a {
+.nav.active,
+.nav.active a {
     color: #000;
 }
 
-.icon-cart{
+.icon-cart {
     width: 40px;
     height: 40px;
     stroke: #000;
 }
 
-.icon-cart:hover{
+.icon-cart:hover {
     cursor: pointer;
 }
 
-.container-icon{
+.container-icon {
     position: relative;
+   
 }
 
-.count-products{
+.count-products {
     position: absolute;
-    top: 55%;
+    top: 80%;
     right: 0;
+   
 
     background-color: #000;
     color: #fff;
@@ -134,11 +253,11 @@ header{
     border-radius: 50%;
 }
 
-#contador-productos{
+#contador-productos {
     font-size: 12px;
 }
 
-.container-cart-products{
+.container-cart-products {
     position: absolute;
     top: 50px;
     right: 0;
@@ -148,10 +267,10 @@ header{
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
-    
+
 }
 
-.cart-product{
+.cart-product {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -161,94 +280,170 @@ header{
 
 }
 
-.info-cart-product{
+.info-cart-product {
     display: flex;
     justify-content: space-between;
     flex: 0.8;
 }
 
-.titulo-producto-carrito{
+.titulo-producto-carrito {
     font-size: 20px;
 }
 
-.precio-producto-carrito{
+.precio-producto-carrito {
     font-weight: 700;
     font-size: 20px;
     margin-left: 10px;
 }
 
-.cantidad-producto-carrito{
+.cantidad-producto-carrito {
     font-weight: 400;
     font-size: 20px;
 }
 
-.icon-close{
+.icon-close {
     width: 25px;
     height: 25px;
 }
 
-.icon-close:hover{
+.icon-close:hover {
     stroke: red;
     cursor: pointer;
 }
 
-.cart-total{
+.cart-total {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
     gap: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.cart-total h3{
+.cart-total h3 {
     font-size: 20px;
     font-weight: 700;
 }
 
-.total-pagar{
+.total-pagar {
     font-size: 20px;
     font-weight: 900;
 }
 
-.hidden-cart{
+.hidden-cart {
     display: none;
 }
 
-.cart-empty{
+.cart-empty {
     padding: 20px;
     text-align: center;
 }
+.info-cart-product{
+    font-family: 'Times New Roman', Times, serif;
+}
 
 
-.hidden{
+.hidden {
     display: none;
 }
 
 .imagen-mediana {
     display: block;
-    margin: 0 auto; /* Para centrar la imagen horizontalmente */
-    width: 50%; /* Establece el tamaño de la imagen al 50% del contenedor */
-    max-width: 400px; /* Limita el tamaño máximo de la imagen a 400px */
+    margin: 0 auto;
+    /* Para centrar la imagen horizontalmente */
+    width: 50%;
+    /* Establece el tamaño de la imagen al 50% del contenedor */
+    max-width: 400px;
+    /* Limita el tamaño máximo de la imagen a 400px */
 }
-.parrafo-nosotros{
+
+.parrafo-nosotros {
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px; /* Tamaño del texto */
-    color: #333; /* Color del texto */
+    font-size: 18px;
+    /* Tamaño del texto */
+    color: #333;
+    /* Color del texto */
 }
 
 h2 {
-    margin-bottom: 20px; /* Añade un espacio inferior de 20px entre títulos */
+    margin-bottom: 20px;
+    /* Añade un espacio inferior de 20px entre títulos */
 }
 
 hr {
     border: none;
-    border-top: 2px solid white; /* Línea horizontal de color gris oscuro */
-    margin: 20px 0; /* Márgenes superior e inferior de 20px */
+    border-top: 2px solid white;
+    /* Línea horizontal de color gris oscuro */
+    margin: 20px 0;
+    /* Márgenes superior e inferior de 20px */
 }
 
 .avatar {
-    width: 70px; /* Ancho de la imagen del avatar */
-    height: 70px; /* Altura de la imagen del avatar */
-    margin-right: 10px; /* Espaciado a la derecha de la imagen del avatar */
-    border-radius: 50%; /* Para hacer la imagen redonda, si es necesario */
+    width: 70px;
+    /* Ancho de la imagen del avatar */
+    height: 70px;
+    /* Altura de la imagen del avatar */
+    margin-right: 10px;
+    /* Espaciado a la derecha de la imagen del avatar */
+    border-radius: 50%;
+    /* Para hacer la imagen redonda, si es necesario */
 }
+@media screen and (max-width:1200px){
+   
+}
+@media screen and (max-width:720px) {
+
+    
+}
+/* Estilos generales para el botón de pago */
+.Btn-pago {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+  .svgIcon {
+    width: 16px;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .Btn-pago::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+  }
+  
+  .Btn-pago:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+  }
+  
+  .Btn-pago:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+  }
+
+/* Puedes personalizar más estilos según tus preferencias de diseño */

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const containerCartProducts = document.querySelector('.container-cart-products');
     const cartInfo = document.querySelector('.cart-product');
     const rowProduct = document.querySelector('.row-product');
-    const productsList = document.querySelector('.container-items');
+    const productsList = document.querySelector('.container-menu');
     const valorTotal = document.querySelector('.total-pagar');
     const countProducts = document.querySelector('#contador-productos');
     const cartEmpty = document.querySelector('.cart-empty');
